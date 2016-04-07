@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>arubtsov</groupId>
+	<artifactId>docker-web</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<scm>
+		<url>https://github.com/ninglei20038505/spring-boot-test.git</url><!--可直接檢視Repository的網址 -->
+		<connection>scm:git:git://github.com/ninglei20038505/spring-boot-test.git</connection><!--Svn網址(port若是80可省略，也許只能Checkout)，如果是git換成scm:git:git://yourSvnHost:port/.../ -->
+		<developerConnection>scm:git:https://ninglei20038505@github.com/ninglei20038505/spring-boot-test.git</developerConnection><!--開發人員所用的Svn網址，如果是git換成scm:git:git://yourSvnHost:port/.../ -->
+	</scm>
+
+	<name>demo</name>
+	<description>Trivial Spring Boot web app</description>
+
+	<build>
+		<plugins>
+			<!-- 版本控制插件 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-scm-plugin</artifactId>
+				<!-- Checkout之後要執行的Goal -->
+				<configuration>
+					<goals>package</goals><!--給scm:bootstrap goal使用，checkout後立即執行 package 
+						goal -->
+					<connectionType>developerConnection</connectionType><!--預設是connection，這裡換成開發人員 -->
+					<username>ninglei_1@sina.com</username>
+					<password>chenjia99</password>
+					<providerImplementations>
+						<git>jgit</git>
+					</providerImplementations>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>org.apache.maven.scm</groupId>
+						<artifactId>maven-scm-provider-jgit</artifactId>
+						<version>1.9.4</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
