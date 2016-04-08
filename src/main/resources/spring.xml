@@ -13,7 +13,7 @@
 	<!-- Jedis ConnectionFactory -->
 	<bean id="jedisConnectionFactory"
 		class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory"
-		p:host-name="${uREDIS_PORT_6379_TCP_ADDR}" p:port="${uREDIS_PORT_6379_TCP_PORT}" />
+		p:host-name="${REDIS_PORT_6379_TCP_ADDR}" p:port="${REDIS_PORT_6379_TCP_PORT}" />
 
 	<!-- redis template definition -->
 	<bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate"
