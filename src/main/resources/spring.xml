@@ -19,14 +19,10 @@
 	</bean>
 
 	<!-- Jedis ConnectionFactory -->
-	<!-- <bean id="jedisConnectionFactory"
+	<bean id="jedisConnectionFactory"
 		class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory"
-		p:host-name="${env.addr}" p:port="${env.port}" /> -->
+		p:host-name="192.168.99.100" p:port="3691" />
 		
-	<bean id="myConnectionFactory" class="arubtsov.redis.client.MyConnectionFaction">
-		<property name="env" ref="env"></property>  
-	</bean>
-
 	<!-- redis template definition -->
 	<bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate"
 		p:connection-factory-ref="myConnectionFactory" />
