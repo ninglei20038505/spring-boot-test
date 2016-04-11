@@ -13,10 +13,10 @@
 	<bean id="propertyConfigurer"
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" />
 
-	<bean id="env" class="arubtsov.bean.Environments">
+<!-- 	<bean id="env" class="arubtsov.bean.Environments">
 		<property name="addr" value="${REDIS_PORT_6379_TCP_ADDR}" />
 		<property name="port" value="${REDIS_PORT_6379_TCP_PORT}" />
-	</bean>
+	</bean> -->
 
 	<!-- Jedis ConnectionFactory -->
 	<bean id="jedisConnectionFactory"
