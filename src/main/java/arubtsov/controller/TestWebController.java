@@ -16,13 +16,13 @@ public class TestWebController {
 	
 	@RequestMapping(value = "/echo", method = RequestMethod.GET, produces = "application/json;charset=UTF-8")
 	public String echo() {
-		return "Hello Docker!!!!!!!!!!!!!!!!!!!";
+		return "Hello init Docker!!!!!!!!!!!!!!!!!!!";
 	}
 
 	@RequestMapping(value = "/index/get", method = RequestMethod.GET, produces = "application/json;charset=UTF-8")
 	public String index() {
 		System.out.println("index................");
-		return "Hello Docker!!!!!!!!!!!!!!!!!!!";
+		return "Hello init Docker!!!!!!!!!!!!!!!!!!!";
 	}
 
 	@RequestMapping(value = "/redis/get/{key}", method = RequestMethod.GET, produces = "application/json;charset=UTF-8")
