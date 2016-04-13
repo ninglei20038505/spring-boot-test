@@ -10,14 +10,6 @@
 
 	<context:component-scan base-package="arubtsov" />
 
-	<bean id="propertyConfigurer"
-		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" />
-
-<!-- 	<bean id="env" class="arubtsov.bean.Environments">
-		<property name="addr" value="${REDIS_PORT_6379_TCP_ADDR}" />
-		<property name="port" value="${REDIS_PORT_6379_TCP_PORT}" />
-	</bean> -->
-
 	<!-- Jedis ConnectionFactory -->
 	<bean id="jedisConnectionFactory"
 		class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory"
